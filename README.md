@@ -36,3 +36,40 @@ This project is a custom-built tool designed to help job seekers generate a tail
    ```bash
    git clone https://github.com/your-username/tailored-resume-bot.git
    cd tailored-resume-bot
+
+2. **Setup:**
+
+Make sure your OpenAI API key is stored securely in your Colab environment’s secrets with the label "openai". The project is set up to load the key automatically.
+
+3. **Usage:**
+
+- To launch the application:
+Run the Main Script python tailor_application.py
+
+After running the script, a shareable URL will be provided. Open the URL in your browser to access the Gradio interface.
+
+Job Description: Paste the job description into the provided textbox.
+
+Company Details: Enter the details about the company.
+
+Resume PDF: Upload your PDF resume.
+
+Once you submit the form, the tool will generate a tailored resume and a complete cover letter based on the provided inputs.
+
+4. **Run in Google Colab:**
+You can also try the project directly in Google Colab. Click the link below to open the notebook:
+
+[Run in Google Colab](https://colab.research.google.com/drive/1ACShlegW1IR-4TSE2bfI1Wz_-gAsvUlv?usp=sharing) 
+
+5. **Code Overview:**
+tailor_application.py:
+Contains the main function tailor_application_pdf, which:
+
+Uses PyPDF2 to extract text from a PDF resume.
+
+Constructs a detailed prompt for the OpenAI API.
+
+Generates a tailored resume and cover letter that meet the ATS and human-readability requirements.
+
+Gradio Interface:
+Provides a simple and intuitive web interface for user inputs and displays the generated output.
